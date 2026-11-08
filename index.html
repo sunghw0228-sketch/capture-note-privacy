@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>캡처 노트 개인정보처리방침</title>
+<meta name="description" content="크롬 확장 프로그램 '캡처 노트'의 개인정보처리방침">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FDFBF8;--ink:#1F1B17;--ink2:#3A332C;--muted:#6B6157;--line:#E7DFD4;--accent:#A33A23;--card:#FFFFFF}
+@media (prefers-color-scheme: dark){:root{--bg:#1B1815;--ink:#F2ECE4;--ink2:#D9D0C5;--muted:#A89C8E;--line:#3A332C;--accent:#E07A5F;--card:#242019}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'IBM Plex Sans KR',system-ui,sans-serif;font-size:16px;line-height:1.8}
+main{max-width:760px;margin:0 auto;padding:56px 20px 80px}
+h1{font-family:'Noto Serif KR',serif;font-size:32px;line-height:1.35;margin:0 0 8px}
+h2{font-family:'Noto Serif KR',serif;font-size:21px;margin:44px 0 10px;padding-top:20px;border-top:1px solid var(--line)}
+p,li{color:var(--ink2)}
+ul{padding-left:20px}
+li{margin:4px 0}
+a{color:var(--accent)}
+.meta{color:var(--muted);font-size:14px;margin:0}
+.summary{margin:28px 0 0;padding:18px 20px;background:var(--card);border:1px solid var(--line);border-radius:12px}
+.summary strong{color:var(--ink)}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{color:var(--ink);font-weight:600;background:var(--card)}
+.scroll{overflow-x:auto}
+footer{margin-top:56px;color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<main>
+<h1>캡처 노트 개인정보처리방침</h1>
+<p class="meta">게시자: 자족 · 시행일: 2026년 11월 8일</p>
+
+<div class="summary">
+<p style="margin:0"><strong>한눈에 보기</strong></p>
+<ul style="margin:6px 0 0">
+<li>캡처, 메모, 노트는 <strong>사용자 컴퓨터의 브라우저 안에만</strong> 저장돼요. 개발자는 별도 서버를 운영하지 않고, 사용자 데이터를 받거나 볼 수 없어요.</li>
+<li>사용자가 <strong>직접 질문하거나 요약을 요청할 때만</strong> 해당 캡처와 질문이 사용자 본인의 API 키로 Google Gemini API에 전송돼요.</li>
+<li>광고, 사용자 추적, 분석 도구를 쓰지 않고, 데이터를 팔거나 다른 곳에 넘기지 않아요.</li>
+</ul>
+</div>
+
+<h2>1. 이 방침이 적용되는 대상</h2>
+<p>이 방침은 크롬 확장 프로그램 "캡처 노트"(이하 "확장 프로그램")에 적용돼요. 확장 프로그램은 웹페이지 화면 일부를 캡처하고, 캡처 위에 메모와 표시를 남기고, Gemini에게 질문한 내용과 함께 노트로 정리하는 도구예요.</p>
+
+<h2>2. 처리하는 정보와 저장 위치</h2>
+<div class="scroll">
+<table>
+<tr><th>정보</th><th>언제 생기나요</th><th>어디에 저장되나요</th></tr>
+<tr><td>캡처 이미지, 그 위의 펜·도형·포스트잇 메모</td><td>사용자가 캡처하고 표시할 때</td><td>사용자 브라우저(확장 프로그램 저장소)</td></tr>
+<tr><td>질문, Gemini의 답변, 내 메모, 노트 요약</td><td>사용자가 질문·메모·요약할 때</td><td>사용자 브라우저</td></tr>
+<tr><td>캡처한 페이지의 주소, 제목, 스크롤 위치, 캡처 영역 근처의 문장 한 줄</td><td>캡처하는 순간</td><td>사용자 브라우저 ("캡처한 위치로 가기"에 사용)</td></tr>
+<tr><td>Gemini API 키</td><td>사용자가 설정에서 연결할 때</td><td>사용자 브라우저(chrome.storage.local)</td></tr>
+<tr><td>설정(단축키 안내 표시 여부, 창 크기, 백업 폴더 등)</td><td>사용할 때</td><td>사용자 브라우저</td></tr>
+<tr><td>백업 파일</td><td>자동 백업 또는 [지금 백업]을 할 때</td><td>사용자가 고른 폴더 또는 다운로드 폴더</td></tr>
+</table>
+</div>
+<p>위 정보는 개발자에게 전송되지 않으며, 개발자는 이를 수집하거나 열람할 수 없어요.</p>
+
+<h2>3. 외부로 전송되는 정보 (Google Gemini API)</h2>
+<p>사용자가 [묻기], 빠른 질문(요약해줘·설명해줘·번역해줘), [이어서 묻기], 노트 요약을 실행할 때에만 아래 정보가 <strong>사용자 본인의 Gemini API 키</strong>로 Google에 전송돼요.</p>
+<ul>
+<li>캡처 이미지(사용자가 그린 펜·도형·형광펜 표시 포함)</li>
+<li>사용자가 입력한 질문</li>
+<li>해당 캡처의 포스트잇 메모와 내 메모 내용(답변의 맥락으로 사용)</li>
+<li>같은 캡처에서 이전에 주고받은 질문과 답(이어서 묻기)</li>
+<li>노트 요약을 요청한 경우, 그 노트에 있는 질문·답·메모 텍스트</li>
+</ul>
+<p>전송된 정보는 Google의 정책에 따라 처리돼요. Gemini API 무료 등급을 쓰는 경우, Google이 보낸 내용을 서비스 개선에 사용할 수 있어요. 자세한 내용은 <a href="https://ai.google.dev/gemini-api/terms" rel="noopener">Gemini API 추가 서비스 약관</a>과 <a href="https://policies.google.com/privacy" rel="noopener">Google 개인정보처리방침</a>을 확인해 주세요. 개인정보나 회사 기밀이 보이는 화면은 질문하지 않는 것을 권장해요.</p>
+<p>Gemini 키를 연결하지 않으면 어떤 정보도 외부로 전송되지 않아요.</p>
+
+<h2>4. 권한을 쓰는 이유</h2>
+<ul>
+<li><strong>현재 탭 접근, 스크립트 실행</strong>: 단축키·툴바 아이콘·오른쪽 클릭 메뉴로 캡처를 시작했을 때, 그 탭 화면을 찍고 캡처 범위를 고르는 화면을 띄우기 위해</li>
+<li><strong>저장소</strong>: 노트와 설정을 사용자 브라우저에 저장하기 위해</li>
+<li><strong>클립보드</strong>: [복사]로 캡처를 클립보드에 넣고, Gemini 키 연결 중에만 사용자가 복사한 키를 읽어오기 위해(연결 후 클립보드에서 키를 지워요)</li>
+<li><strong>다운로드</strong>: 내보내기와 백업 파일을 저장하기 위해</li>
+<li><strong>오른쪽 클릭 메뉴, 단축키, 알림 배지</strong>: 캡처와 노트를 쉽게 열기 위해</li>
+<li><strong>Google AI Studio, Gemini API 주소 접근</strong>: 키 발급 안내창을 띄우고, 사용자가 질문할 때 Gemini에 요청하기 위해</li>
+</ul>
+
+<h2>5. 하지 않는 것</h2>
+<ul>
+<li>광고, 사용자 추적, 방문 기록 수집, 분석 도구 사용을 하지 않아요.</li>
+<li>사용자 데이터를 판매하거나, 광고 목적으로 쓰거나, 제3자에게 넘기지 않아요.</li>
+<li>사용자가 캡처하지 않은 페이지 내용을 읽지 않아요.</li>
+<li>외부에서 코드를 내려받아 실행하지 않아요.</li>
+</ul>
+<p>이 확장 프로그램의 사용자 데이터 사용은 <a href="https://developer.chrome.com/docs/webstore/program-policies/limited-use" rel="noopener">Chrome 웹 스토어 사용자 데이터 정책(제한적 사용 요건 포함)</a>을 준수해요.</p>
+
+<h2>6. 보관 기간과 삭제</h2>
+<ul>
+<li>노트와 캡처는 사용자가 지울 때까지 사용자 브라우저에 남아 있어요. 노트 화면에서 캡처나 노트를 삭제할 수 있어요.</li>
+<li>Gemini 키는 설정의 [연결 해제]로 언제든 지울 수 있어요.</li>
+<li>확장 프로그램을 삭제하면 브라우저에 저장된 노트, 설정, 키가 함께 지워져요.</li>
+<li>백업 파일은 사용자 컴퓨터의 파일이라, 필요 없으면 사용자가 직접 삭제하면 돼요.</li>
+<li>Google로 전송된 정보의 보관과 삭제는 Google의 정책을 따라요.</li>
+</ul>
+
+<h2>7. 아동</h2>
+<p>이 확장 프로그램은 만 14세 미만 아동을 대상으로 하지 않아요.</p>
+
+<h2>8. 방침 변경</h2>
+<p>기능이 바뀌어 처리하는 정보가 달라지면 이 페이지를 업데이트하고, 위쪽의 시행일을 바꿔 알려드려요. 중요한 변경은 확장 프로그램 업데이트 안내에도 적을게요.</p>
+
+<h2>9. 문의</h2>
+<p>개인정보 관련 문의: <a href="mailto:[연락 이메일]">[연락 이메일]</a></p>
+
+<footer>© 2026 자족 · 캡처 노트</footer>
+</main>
+</body>
+</html>
